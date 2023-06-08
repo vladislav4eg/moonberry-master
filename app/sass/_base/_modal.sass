@@ -1,0 +1,236 @@
+.modal
+	position: relative
+	overflow: hidden
+	width: auto
+	max-width: 1300px
+	padding: 10px
+	background-color: #fff
+	z-index: 1
+	max-height: auto
+	background-image: url("../img/modal-aloe.png") 
+	background-repeat: no-repeat
+	background-size:  27% 34%
+	background-position: 103% 101%
+	.wrapper
+		text-align: center
+		padding: 40px 100px 80px 100px
+
+		h2
+			text-transform: uppercase
+			margin-bottom: 50px
+			font-size: 28px
+			text-align: center
+			&:after
+				display: none
+
+		input, select
+			border-radius: 5px
+			border: 1px solid #cae0dd
+			background-color: #f4fafb
+			margin-bottom: 30px
+			width: 330px
+			text-align: left
+			font-size: 16px
+			color: #596e6a
+			&:hover
+				outline: none
+			&:focus
+				outline: none
+			&:nth-child(3n)
+				margin-right: 0
+
+		textarea
+			width: 100%
+			background-color: #f4fafb
+			border: 1px solid #cae0dd
+			height: 100%
+			padding: 20px
+			font-size: 16px
+			color: #596e6a
+			border-radius: 10px
+
+			
+		label.error
+			position: absolute
+			top: -20px
+			right: 0
+			left: 0
+			transition: all .3s
+			animation: error .3s linear 1 forwards
+			color: red
+			text-align: center
+			font-weight: 400
+		.form-call
+			margin-top: 50px
+			padding: 12px 40px
+			box-shadow: none
+			border: none
+		.area-group
+			width: 100%
+			height: 180px
+
+		#selector
+			background-color: #fff
+			border: 1px solid #cae0dd
+			width: 330px
+			height: 50px
+			border-radius: 5px
+			padding: 10px 20px
+			font-size: 16px
+			color: #596e6a
+			margin-bottom: 30px
+			
+		.selector
+			width: 100%
+			margin-bottom: 20px	
+			display: flex
+			align-items: flex-start
+
+		&__container
+			margin-bottom: 50px
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+		p
+			font-size: 14px
+
+			font-weight: 300
+			width: 80%
+			margin-left: 10%
+			margin-bottom: 35px
+		small
+			font-size: 10px
+			text-align: center
+
+		.sub-title
+			margin-bottom: 30px
+
+		.form-group
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: center
+			div
+				position: relative
+				
+
+		.btn
+			width: 270px
+			padding: 18px 0
+			font-size: 12px
+			margin-bottom: 10px
+
+		.close
+			margin-right: 7px
+			margin-top: 10px
+			position: absolute
+			right: 15px
+			top: 15px
+			display: block
+			background: white
+			border: none
+			outline: none
+			cursor: pointer
+			
+.modal_order
+	max-width: 80% !important
+	background-image: none
+	padding: 50px
+	width: 80%
+	.wrapper
+		padding: 0
+		p
+			margin-left: 0
+	.text-block
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	p
+		text-align: left
+		width: 100%
+		margin-left: 0
+		font-size: 20px
+		line-height: 1.5
+	h2
+		font-size: 30px
+	h3
+		font-size: 30px
+		font-weight: 300
+
+#question
+	width: 400px
+	text-align: center
+	padding: 50px
+	
+	h2
+		margin-bottom: 0
+		&::after
+			margin-top: 15px
+			margin-bottom: 15px
+	p
+		margin-bottom: 30px
+		text-align: center
+
+	input
+		width: 100%
+
+	.form-group
+		width: 100%
+		margin-bottom: 20px
+		div
+			width: 100%
+
+
+#thanks
+	width: 320px
+	background-image: none
+	text-align: center
+	padding: 50px
+
+	h2
+		font-size: 30px
+		text-align: center
+		margin-bottom: 20px
+		&:after
+			display: none
+
+		span
+			font-size: 16px
+
+	p
+		text-align: center
+
+	b
+		font-weight: 600
+	
+	.close
+		position: absolute
+		top: 5px
+		right: 5px
+		background: 0 0
+		border: none
+
+	.sub-title
+		margin-bottom: 15px
+
+	.hamburger
+		position: absolute
+		right: 10px
+		top: 10px
+		display: block
+
+.close 
+	.thanks_close
+		border: none
+		background: none
+
+.thanks_close
+	border: none
+	background: none
+	position: absolute
+	top: 20px
+	right: 20px
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none

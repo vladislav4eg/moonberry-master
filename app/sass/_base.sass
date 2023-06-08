@@ -1,0 +1,175 @@
+@import "_base/fonts"
+
+
+//----------------------fonts---------------------
+$fonts: 'Futura New', sans-serif
+
+//---------------------end-fonts---------------------
+
+
+//----------------------color---------------------
+$accent: #cf816d
+$text: #232a32
+//---------------------end-color---------------------
+
+
+html
+	overflow-x: hidden
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-size: 14px
+	color: $text
+	font-family: $fonts
+	line-height: 1.75
+	font-weight: 400
+
+::selection
+	background-color: $accent
+	color: #fff
+
+section
+	
+	
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.4
+	margin: 0
+	padding: 0
+
+h1
+	font-size: 55px
+	color: #001e33
+	text-transform: uppercase
+	margin-bottom: 45px
+	line-height: 1.3
+
+	span
+		text-transform: none
+
+h2
+	position: relative
+	font-size: 72px
+	line-height: 1.2
+	font-weight: 300
+	span
+		font-weight: 500
+
+h3
+	font-weight: 700
+	font-size: 18px
+	margin-bottom: 10px
+
+h4
+	font-size: 36px
+	color: #fff
+
+h5
+	text-transform: uppercase
+	font-weight: 600
+	margin-bottom: 15px
+
+h6
+	font-size: 24px
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+i
+	font-style: normal
+	font-size: 16px
+
+input, textarea
+	border: none
+	border-radius: 0
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	&:focus:required:invalid
+		border-color: #808080
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+	&:required:valid
+		border-color: #808080
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #808080
+		font-size: 12px
+		text-transform: uppercase
+		line-height: 1
+
+input
+	padding: 15px 25px
+	border-radius: 40px
+	font-weight: 400
+	line-height: 1
+	text-align: center
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover
+	outline: none
+
+[class^="icon-"], [class*=" icon-"] 
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.icon-facebook:before 
+  content: "\e900"
+
+.icon-twiter:before 
+  content: "\e901"
+
+.call
+		font-size: 13px
+		font-weight: 700
+		background-color: #44edaf
+		border-radius: 50px	
+		padding: 20px
+		text-align: center
+		color: #13a28c
+		border-top: 1px solid #4cd6a7
+		background: linear-gradient(to right, #45edae, #3be7cd)
+		&:hover
+			background: linear-gradient(to right, #2df6a8, #25f5d6)
+			text-decoration: none
+			outline: none
+
+		&:focus
+			background: linear-gradient(to right, #0adc8b, #10d5b9)
+
+
+
+
+
+@import "_base/preloader"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"

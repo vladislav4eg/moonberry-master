@@ -1,0 +1,793 @@
+@import "libs"
+@import "base"
+@import "page"
+
+
+.header
+	top: 0
+	right: 0
+	left: 0
+	z-index: 100
+	position: fixed
+
+	&__logo
+		margin-right: 20px
+
+	&-active
+		position: fixed
+		animation: down 0.5s ease
+		border-bottom: none
+		padding-top: 0px
+		background: #eaf8f7
+		opacity: 0.96
+		left: 0
+		top: 0
+		right: 0
+		z-index: 1000
+		padding: 5px 0
+
+		img
+			transition: all 0.3s ease
+			width: 70px
+			height: 70px
+
+		.nav .social .phone__tel
+			font-size: 16px
+
+		.nav
+			a
+				font-size: 18px
+
+			li
+				margin-right: 20px
+
+		.social
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			width: 32%
+			text-align: center
+			justify-content: center
+			.phone__tel
+				font-size: 20px
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+
+	.social
+		display: flex
+		flex-direction: column
+
+		i
+			color: #5d9cc9
+			height: 16px
+			width: 16px
+			margin-right: 15px
+			text-decoration: none
+			&:hover
+				color: #f77c84
+				text-decoration: none
+
+		.phone__tel
+			font-size: 24px
+			color: #151617
+			font-weight: 500
+			line-height: 1.3
+		a
+			color: #7b8a93
+			font-size: 16px
+			&:hover
+				text-decoration: none
+				outline: none
+
+		.call
+			font-size: 13px
+			font-weight: 700
+			background-color: #44edaf
+			border-radius: 50px	
+			padding: 12px
+			text-align: center
+			color: #13a28c
+	
+	&__content
+		background-image: url("../img/main-bg.png")
+		background-position: 0 0
+		background-repeat: no-repeat
+		background-size: cover
+		padding-top: 200px
+		padding-bottom: 70px
+		position: relative
+		h1
+			font-weight: 300
+			font-size: 60px
+			width: 60%
+			position: relative
+			z-index: 1
+			strong
+				text-transform: uppercase
+				font-weight: 400
+				position: relative
+				&:before
+					position: absolute
+					content: ''
+					bottom: 8px
+					left: 0
+					right: 0
+					height: 20px
+					background-color: #3feac0
+					z-index: -1
+
+		.bix-text
+			font-size: 30px
+			font-weight: 400
+			width: 64%
+			color: #151617
+
+		p
+			color: #7b8a93
+			font-size: 24px
+			font-weight: 300
+			width: 62%
+			line-height: 32px
+			margin-bottom: 55px
+			&:last-child
+				margin-bottom: 0
+
+		&.hamburger-active
+			z-index: 1000000
+
+		.studio
+			margin-bottom: 30px
+			font-size: 20px
+			font-weight: 300
+			margin-left: 80px
+			position: relative
+		
+			text-transform: uppercase
+			&:before
+				content: ''
+				height: 2px
+				width: 50px
+				background-color: #f77c84	
+				position: absolute
+				left: -75px
+				top: 14px
+
+		img
+			position: absolute
+			&:nth-child(1)
+				top: 4%
+				right: 52%
+			&:nth-child(2)
+				top: 69%
+				right: 90%
+			&:nth-child(3)
+				left: 90%
+				top: 75%
+		
+		.swiper-pagination
+			width: auto
+			bottom: 130px
+			left: 50%	
+			transform: translateX(-580px)
+
+.nav
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	ul
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+	li
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
+	
+	a
+		position: relative
+		font-size: 18px
+		color: #000
+		z-index: 1
+		&::before
+			content: ''
+			width: 0
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			bottom: -10px
+			width: 100%
+			height: 1px
+			background-color: #61a3ce
+			z-index: -1
+
+		&:hover
+			color: #61a3ce
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+		&:focus
+			color: #61a3ce
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+	.social
+		display: none
+
+.social
+	display: flex
+	flex-direction: column
+	.phone__tel
+		font-size: 24px
+		color: #151617
+		font-weight: 500
+		line-height: 1.3
+	a
+		color: #7b8a93
+		font-size: 16px
+	.call
+		font-size: 13px
+		font-weight: 700
+		background-color: #44edaf
+		border-radius: 50px	
+		padding: 12px
+		text-align: center
+		color: #13a28c
+	
+.social-button
+	display: none
+
+.wrap-social
+	text-align: center
+	display: flex
+	flex-direction: row
+	transition: all .3s
+
+	div
+		display: flex
+		flex-direction: column
+		transition: all .3s
+
+.header-active, .header-menu
+	.wrap-social
+		display: flex
+		flex-direction: row
+		align-items: center
+
+		div
+			margin-right: 15px
+
+		.call
+			padding: 0 25px
+			height: 43px
+			line-height: 40px
+			transition: all .3s
+
+		.nav
+			a
+				font-size: 18px
+				flex-direction: row
+
+		.phone__tel
+				font-size: 20px
+
+.swiper-content
+	padding-top: 130px
+	padding-bottom: 250px
+
+	span
+		margin-right: 10px
+
+.swiper-pagination-bullet
+	background: #999999
+	width: 40px
+	height: 1px
+	border-radius: 0
+	opacity: 1
+	margin-left: 5px
+	&-active
+		background: #5c9bc9
+
+.about
+	position: relative
+	padding-top: 115px
+	padding-bottom: 120px	
+	.left-procedur
+		position: relative
+		z-index: 1
+		img
+
+			&:nth-child(2)
+				top: -40px
+				left: -110px
+				position: absolute
+				z-index: -1
+			&:nth-child(3)
+				position: absolute
+				bottom: -35px
+				left: -160px
+
+			
+
+	.right-procedur
+		position: relative
+		h2
+			margin-top: 30px
+			font-size: 36px
+			line-height: 1
+			position: relative
+			margin-bottom: 48px
+			display: block
+			font-weight: 400
+			&:after
+				height: 1px
+				width: 300px
+				color: red
+				position: absolute
+				content: ''
+				bottom: -55px
+				left: 0
+				background-color: #f77c84
+				
+			&:before
+				position: absolute
+				top: -175px
+				left: -105px
+				content: 'О нас'
+				font-size: 250px
+		
+				font-style: italic
+				color: #fff0f1	
+				white-space: nowrap
+				z-index: -1
+				
+		p
+			margin-bottom: 12px
+			
+		a
+			margin-top: 60px
+			height: 55px
+			padding: 21px 50px	
+			font-weight: 500
+			font-size: 14px
+		img
+			position: absolute
+			left: 80%	
+			top: 13%
+
+.wrap-bottle-logo
+	max-width: 280px
+	height: auto
+
+.drinks
+	background: url("../img/second-bg.png")
+	background-repeat: no-repeat
+	background-position: 0 -100px
+	background-size: cover
+	padding-top: 300px
+	padding-bottom: 200px
+
+	h2
+		span
+			font-size: 60px
+			text-transform: uppercase
+
+	.content
+		&-wrap
+			display: flex
+			flex-direction: row
+		&-left
+			padding-left: 50px
+			width: 54%
+			position: relative
+			
+			
+			h2
+				margin-bottom: 40px
+			ul
+				margin-bottom: 40px
+					
+				li
+					color: #596e6a
+					font-size: 24px
+					padding-left: 50px
+					font-weight: 300
+					margin-bottom: 15px
+					position: relative
+					line-height: 1.5
+
+					&::before
+						position: absolute
+						border-radius: 50%
+						content: ''
+						background: #596e6a
+						height: 5px
+						width: 5px	
+						top: 17px
+						left: 25px
+						
+						
+			p
+				font-size: 22px
+				font-weight: 500
+
+		&-right
+			position: relative
+			width: 190px
+			height: 190px
+			background-color: #fff
+			border-radius: 50%
+			top: 130px
+			z-index: 0
+			p
+				font-size: 14px
+				font-weight: 900
+				text-transform: uppercase
+				text-align: center
+				margin-top: 60px
+				z-index: 5
+			
+				
+			&:after
+				z-index: -1
+				position: absolute
+				content: ''
+				width: 160px
+				height: 160px
+				background-color: #edf8f9
+				border: 1px solid #cdf5ef
+				left: 8.2%
+				top: 8%
+				border-radius: 50%
+
+.declaration
+	background: linear-gradient(to bottom, #f9fdfd, #ffffff)
+	
+	h2
+		font-size: 72px
+		span
+			font-size: 48px
+			text-transform: uppercase
+
+	.button-content
+		padding-bottom: 90px
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		position: relative
+		z-index: 1
+		&:before
+			width: 100%
+			content: ''
+			bottom: 125px
+			height: 1px 
+			background: #657a7e
+			position: absolute
+			z-index: 0
+		a
+			background-color: #fff
+			padding: 0 20px
+			margin-right: 20px
+			border-radius: 50px
+			font-size: 12px
+			color: #596e6a
+			border: 1px solid #657a7e
+			z-index: 1
+			height: 55px
+			line-height: 55px
+			img
+				padding-right: 10px
+
+	.last-block
+		padding-top: 50px
+		padding-bottom: 50px
+		position: relative
+		display: flex
+		flex-direction: row
+		z-index: 2
+		&:before
+			position: absolute
+			content: ''
+			background: #e9fcf9
+			top: 10%
+			left: 5%
+			height: 70%
+			width: 87%
+			z-index: -1
+		
+
+		&-text
+
+			padding-top: 90px
+			h2
+				margin-bottom: 35px
+				font-size: 52px
+				text-transform: uppercase
+			p
+				font-size: 24px
+				font-weight: 300	
+				color: #596e6a
+				line-height: 36px	
+			img
+				position: absolute
+				top: 0
+				left: 33%
+
+.slider
+	background: url("../img/slider-bg.png") no-repeat center bottom
+	background-size: 100% 100%
+	padding-bottom: 100px
+
+	h2
+		margin-top: 50%
+		font-size: 65px
+		margin-left: 10%
+		margin-bottom: 50px
+	.button-pagination
+		display: flex
+		flex-direction: row
+		margin-left: 35%
+
+		.bottle-next,	.bottle-prev
+			background-color: #f5fefb
+			border: 10px solid #fff
+			height: 60px
+			width: 60px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			margin-right: 30px
+			box-shadow: 0px 12px 30px rgba(#c0e4e1, 0.6)
+			transition: all 0.5s ease 
+			outline: none
+			cursor: pointer
+			&:hover
+				
+				height: 90px
+				width: 90px
+				img
+					height: 25px
+					width: 25px
+			img
+				height: 15px
+				width: 15px	
+		.bottle-prev
+			img
+				transform: rotate(180deg)
+
+	.bottle
+		top: -25px
+		&__img
+			img
+
+		&__slide
+			display: flex
+			flex-direction: row
+			&-block
+				display: flex
+				flex-direction: column
+				margin-left: 5%
+				span
+					display: block
+					font-size: 24px
+					color: #7b8a93
+					font-weight: 300
+					margin-bottom: 15px
+				h5
+					font-size: 48px
+					font-weight: 300	
+					margin-bottom: 20px
+					line-height: 0.9
+					b
+						font-size: 22px
+						
+				p
+					font-size: 20px
+					font-weight: 600
+					margin-bottom: 50px	
+				.slider_btn
+					width: 160px
+					padding: 15px	
+					&:hover		
+						color: #13a28c
+
+	.last-title
+		text-align: center
+		margin-bottom: 100px
+
+.format
+	background: url("../img/form-bottle-bg.png") no-repeat center top 
+	.aloe
+		display: block
+		margin: -50px auto 0
+
+	h2
+		text-align: center
+		margin-bottom: 95px
+
+	.format-table
+		display: flex
+		flex-direction: row
+		padding-bottom: 60px
+		position: relative
+
+		&-list
+			background-color: #fff
+			width: 48%
+			justify-content: space-between
+			box-shadow: 0px -28px 50px rgba(#c0e4e1, 0.6)
+			text-align: center
+			&:first-child
+				margin-right: 2%
+			
+			.table-top
+				span
+					font-size: 60px
+					font-weight: 400
+			.column-wrap
+				display: flex
+				flex-direction: row
+				.table-center
+					background-color: #f6fcfc
+					border: 1px solid #dfebec
+					width: 50%
+					small
+						color: #7b8a93
+						font-size: 24px
+						margin-bottom: 30px
+					p
+						font-size: 48px	
+			.table-down
+				padding-top: 40px
+				padding-bottom: 40px
+				p
+					font-size: 20px
+					margin-bottom: 60px
+					font-weight: 500
+				.wrapper
+					display: flex
+					flex-direction: row
+					justify-content: center
+					p
+						font-size: 22px
+						color: #7b8a93
+						width: 17%
+						span
+							font-size: 26px
+							color: #151617
+							font-weight: 500
+
+			.last-text
+				width: 97%
+				font-size: 22px
+				color: #7b8a93
+				span
+					font-size: 26px
+					color: #151617
+					font-weight: 500
+
+.where-buy
+	padding-top: 100px
+	padding-bottom: 120px
+	h2
+		text-align: center
+	h4
+		text-align: center
+		font-size: 24px
+		color: #7b8a93
+		font-weight: 300
+		margin-bottom: 60px
+	.magazine
+		display: flex	
+		flex-wrap: wrap
+
+		.magazine-card
+			border: 1px solid #dfebec
+			padding: 35px 10px
+			width: 17.9%
+			text-align: center
+			margin-right: 30px
+			margin-bottom: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			&:nth-child(5n)
+				margin-right: 0
+			img
+				width: auto
+				height: auto	
+
+	.button-wrapper
+		text-align: center
+		margin-top: 75px
+		.magazine-btn
+			padding: 20px 60px
+			&:hover		
+				color: #13a28c
+
+#map
+	height: 500px
+	width: 60%
+	margin: 0 auto
+	border: 15px solid #fff
+	box-shadow: 0px 0px 20px rgba(#000000, 0.6)
+
+.map
+	background: url("../img/map-bg.png") no-repeat center top / cover
+	position: relative
+	
+	&__card
+		position: absolute
+		background-color: #fff
+		overflow: hidden
+		left: 27%
+		top: 5%
+		padding: 40px
+		h2
+			margin-bottom: 35px
+
+		span
+			color: #7b8a93
+			font-size: 20px
+			margin-bottom: 20px
+			display: block
+		p
+			a
+				font-size: 24px
+				margin-bottom: 20px
+
+		a
+			font-size: 20px
+			color: #7b8a93	
+		img
+			height: 20px
+			width: 20px	
+			margin-top: 10px
+			margin-right: 10px
+
+		.logo-footer
+			position: absolute
+			right: -22px
+			bottom: -42px
+
+		.list
+			
+			display: flex
+			flex-direction: row
+	
+	.aloe-fotter
+		position: absolute
+		height: 100%
+		width: auto
+		z-index: 11
+
+.footer
+	padding-top: 80px
+	padding-bottom: 50px
+	.copyright
+		justify-content: space-between
+		display: flex
+		flex-direction: row
+		p
+			font-size: 18px
+			font-weight: 300
+			color: #7b8a93
+			&:first-child
+				text-transform: uppercase
+			a
+				color: #50d1b1
+
+
+
+
+@import "media" // Always at the end
